@@ -1,0 +1,14 @@
+{
+  "name": "resume-builder-backend",
+  "version": "1.0.0",
+  "description": "Backend server for the resume builder application",
+  "scripts": {
+    "dev": ".\\venv\\Scripts\\python api/job_api.py",
+    "create-venv": "python -m venv venv",
+    "install-deps": ".\\venv\\Scripts\\python -m pip install -r requirements.txt",
+    "setup-nltk": ".\\venv\\Scripts\\python -c \"import nltk; nltk.download('stopwords'); nltk.download('punkt')\"",
+    "setup-spacy": ".\\venv\\Scripts\\python -m spacy download en_core_web_sm",
+    "setup": "npm run create-venv && npm run install-deps && npm run setup-nltk && npm run setup-spacy"
+  },
+  "private": true
+} 
