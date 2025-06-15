@@ -3,8 +3,14 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    sourcemap: false
+  },
   server: {
-    port: 5173, // Using Vite's default port
+    port: 3000,
     strictPort: false, // Allow switching ports if 5173 is taken
     host: true, // Listen on all network interfaces
     open: true, // Open browser on server start
